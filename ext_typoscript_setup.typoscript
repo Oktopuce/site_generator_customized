@@ -1,0 +1,19 @@
+# Clear all default states and set new Wizard steps
+module.tx_sitegenerator {
+    settings {
+        siteGenerator {
+            wizard {
+                steps >
+                steps {
+                    10 = Oktopuce\SiteGenerator\Wizard\StateCopyModelSite
+                    20 = Oktopuce\SiteGeneratorCustomized\Wizard\StateCreateFeGroup
+                    30 = Oktopuce\SiteGenerator\Wizard\StateUpdateHomePage
+                    40 = Oktopuce\SiteGenerator\Wizard\StateUpdateTemplateHP
+                    50 = Oktopuce\SiteGenerator\Wizard\StateUpdatePageTs
+                    60 = Oktopuce\SiteGenerator\Wizard\StateUpdateSlugs
+                }
+                baseFeGroupUid = {$module.tx_sitegenerator.settings.siteGenerator.wizard.baseFeGroupUid}
+            }
+        }
+    }
+}

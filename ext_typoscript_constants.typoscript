@@ -1,0 +1,19 @@
+module.tx_sitegenerator {
+    view {
+        templateRootPath = EXT:site_generator_customized/Resources/Private/Templates/
+        partialRootPath = EXT:site_generator_customized/Resources/Private/Partials/
+        layoutRootPath = EXT:site_generator_customized/Resources/Private/Layouts/
+    }
+    settings {
+        siteGenerator {
+            wizard {
+                // Custom form DTO
+                formDto = Oktopuce\SiteGeneratorCustomized\Dto\SiteGeneratorDto
+                // Pid for FE group creation
+                pidFeGroup = 20
+                // Base FE group UID
+                baseFeGroupUid = 6
+            }
+        }
+    }
+}
