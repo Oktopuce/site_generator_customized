@@ -10,9 +10,9 @@ module.tx_sitegenerator {
                 // Custom form DTO
                 formDto = Oktopuce\SiteGeneratorCustomized\Dto\SiteGeneratorDto
                 // Pid for FE group creation
-                pidFeGroup = 20
+                pidFeGroup = 74
                 // Base FE group UID
-                baseFeGroupUid = 6
+                baseFeGroupUid = 2
             }
         }
     }

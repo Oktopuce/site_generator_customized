@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Oktopuce\SiteGeneratorCustomized\EventListener\VariablesForFirstView:
+    tags:
+      - name: event.listener
+        identifier: 'customizeFirstStep'
+        event: Oktopuce\SiteGenerator\Wizard\Event\BeforeRenderingFirstStepViewEvent
+
+  Oktopuce\SiteGeneratorCustomized\EventListener\VariablesForSecondView:
+    tags:
+      - name: event.listener
+        identifier: 'customizeSecondtStep'
+        event: Oktopuce\SiteGenerator\Wizard\Event\BeforeRenderingSecondStepViewEvent
