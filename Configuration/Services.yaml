@@ -15,3 +15,9 @@ services:
       - name: event.listener
         identifier: 'customizeSecondtStep'
         event: Oktopuce\SiteGenerator\Wizard\Event\BeforeRenderingSecondStepViewEvent
+
+  Oktopuce\SiteGeneratorCustomized\EventListener\UpdateTemplateHP:
+    tags:
+      - name: event.listener
+        identifier: 'updateTemplateHP'
+        event: Oktopuce\SiteGenerator\Wizard\Event\UpdateTemplateHPEvent

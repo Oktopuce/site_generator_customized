@@ -33,7 +33,7 @@ class VariablesForFirstView
     /**
      * Class constructor
      *
-     * @param PageRenderer $pageRenderer
+     * @param FrontendUserRepository $frontendUserRepository
      * @param Typo3QuerySettings $typo3QuerySettings
      */
     public function __construct(FrontendUserRepository $frontendUserRepository, Typo3QuerySettings $typo3QuerySettings)
@@ -45,7 +45,7 @@ class VariablesForFirstView
     /**
      * __invoke
      *
-     * @param  array $viewVariables
+     * @param  BeforeRenderingFirstStepViewEvent $event
      * @return void
      */
     public function __invoke(BeforeRenderingFirstStepViewEvent $event): void

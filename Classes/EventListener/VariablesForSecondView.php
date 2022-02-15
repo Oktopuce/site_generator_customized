@@ -33,7 +33,7 @@ class VariablesForSecondView
     /**
      * Class constructor
      *
-     * @param PageRenderer $pageRenderer
+     * @param FrontendUserRepository $frontendUserRepository
      * @param Typo3QuerySettings $typo3QuerySettings
      */
     public function __construct(FrontendUserRepository $frontendUserRepository, Typo3QuerySettings $typo3QuerySettings)
@@ -45,7 +45,7 @@ class VariablesForSecondView
     /**
      * __invoke
      *
-     * @param  array $viewVariables
+     * @param BeforeRenderingSecondStepViewEvent $event
      * @return void
      */
     public function __invoke(BeforeRenderingSecondStepViewEvent $event): void
