@@ -26,14 +26,14 @@ class SiteGeneratorDto extends \Oktopuce\SiteGenerator\Dto\SiteGeneratorDto
      *
      * @var string
      */
-    protected $customizedData = '';
+    protected string $customizedData = '';
 
     /**
      * FE User
      *
      * @var int
      */
-    protected $feUser = 0;
+    protected int $feUser = 0;
 
     /**
      * CustomizedData

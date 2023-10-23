@@ -15,20 +15,20 @@ namespace Oktopuce\SiteGeneratorCustomized\EventListener;
 
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
-use TYPO3\CMS\Extbase\Domain\Repository\FrontendUserRepository;
+use Oktopuce\SiteGeneratorCustomized\Domain\Repository\FrontendUserRepository;
 use Oktopuce\SiteGenerator\Wizard\Event\BeforeRenderingFirstStepViewEvent;
 
 class VariablesForFirstView
 {
     /**
-     * @var FrontendUserRepository
+     * @var ?FrontendUserRepository
      */
-    protected $frontendUserRepository = null;
+    protected ?FrontendUserRepository $frontendUserRepository = null;
 
     /**
-     * @var Typo3QuerySettings
+     * @var ?Typo3QuerySettings
      */
-    protected $typo3QuerySettings = null;
+    protected ?Typo3QuerySettings $typo3QuerySettings = null;
 
     /**
      * Class constructor

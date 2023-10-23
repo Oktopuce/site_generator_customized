@@ -1,0 +1,24 @@
+<html xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<div class="form-group">
+    <div class="form-section">
+        <div class="row">
+            <div class="form-group col-xs-12 col-md-6">
+                <label class="t3js-formengine-label">Select FE user *</label>
+                <div class="form-control-clearable">
+                    <select name="tx_sitegenerator[feUser]" class="form-select form-control-adapt">
+                        <f:for as="feUser" each="{feUsers}">
+                            <option value="{feUser.uid}" {f:if(condition:
+                            '{feUser.uid} == {siteDto.feUser}', then: 'selected')}>{feUser.name}</option>
+                        </f:for>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
+
+

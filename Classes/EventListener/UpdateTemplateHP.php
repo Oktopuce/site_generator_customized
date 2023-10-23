@@ -26,7 +26,7 @@ class UpdateTemplateHP
     public function __invoke(UpdateTemplateHPEvent $event): void
     {
         $action = $event->getAction();
-        if ($action == 'customAction') {
+        if ($action === 'customAction') {
             $parameters = $event->getParameters();
             $value = $event->getValue();
             $dataMapping = $event->getFilteredMapping();

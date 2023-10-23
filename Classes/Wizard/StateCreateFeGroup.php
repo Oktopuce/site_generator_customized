@@ -31,7 +31,8 @@ class StateCreateFeGroup extends StateBase implements SiteGeneratorStateInterfac
      *
      * @param SiteGeneratorWizard $context
      * @return void
-    */
+     * @throws \Exception
+     */
     public function process(SiteGeneratorWizard $context): void
     {
         $settings = $context->getSettings();
@@ -65,7 +66,6 @@ class StateCreateFeGroup extends StateBase implements SiteGeneratorStateInterfac
 
         /* @var $tce DataHandler */
         $tce = GeneralUtility::makeInstance(DataHandler::class);
-        $tce->stripslashes_values = 0;
         $tce->start($data, []);
         $tce->process_datamap();
 

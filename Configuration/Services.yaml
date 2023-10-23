@@ -21,3 +21,7 @@ services:
       - name: event.listener
         identifier: 'updateTemplateHP'
         event: Oktopuce\SiteGenerator\Wizard\Event\UpdateTemplateHPEvent
+
+  Oktopuce\SiteGeneratorCustomized\Domain\Repository\FrontendUserRepository:
+    public: true
+    shared: false
