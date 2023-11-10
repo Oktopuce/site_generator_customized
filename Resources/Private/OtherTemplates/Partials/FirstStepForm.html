@@ -1,0 +1,56 @@
+<html xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<h1>Template changed with Page Ts Config</h1>
+<h1><f:translate key="title_generator" /></h1>
+<h4><f:translate key="form.FirstStepData.title" /></h4>
+
+<div class="form-group">
+    <div class="form-section">
+        <div class="row">
+            <f:if condition="{modelPages -> f:count()} == 1">
+                <f:then>
+                    <f:form.hidden property="modelPid" value="{modelPages.0.uid}" />
+                </f:then>
+                <f:else>
+                    <div class="form-group col-xs-12 col-md-4">
+                        <label class="t3js-formengine-label"><f:translate key="form.FirstStepData.selectModel" /> *</label>
+                        <div class="form-control-clearable">
+                            <f:form.select property="modelPid" options="{modelPages}" optionValueField="uid"
+                                           value="{siteDto.modelPid}"
+                                           optionLabelField="title" class="form-control form-control-adapt form-select" />
+                        </div>
+                    </div>
+                </f:else>
+            </f:if>
+            <div class="form-group col-xs-12 col-md-4">
+                <label class="t3js-formengine-label"><f:translate key="form.FirstStepData.siteTitle" /> *</label>
+                <div class="form-control-clearable">
+                    <f:form.textfield property="title" value="{siteDto.title}" required="1"
+                                      class="form-control t3js-clearable hasDefaultValue t3js-charcounter-initialized" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-md-4">
+                <label class="t3js-formengine-label">Cusomized data *</label>
+                <div class="form-control-clearable">
+                    <f:form.textfield property="customizedData" value="{siteDto.customizedData}" required="1"
+                                      class="form-control t3js-clearable hasDefaultValue t3js-charcounter-initialized" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-md-6">
+                <label class="t3js-formengine-label">Select FE user *</label>
+                <div class="form-control-clearable">
+                    <f:form.select property="feUser" value="{siteDto.feUser}" options="{feUsers}"
+                                   optionValueField="uid" optionLabelField="name"
+                                   class="form-control form-control-adapt form-select" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
